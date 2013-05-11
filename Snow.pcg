@@ -57,9 +57,9 @@ ALIGN:TN
 RACE:Companion (Wolf)
 
 # Character Class(es)
-CLASS:Companion|LEVEL:2|SKILLPOOL:2
-CLASSABILITIESLEVEL:Companion=1|HITPOINTS:6|SKILLSGAINED:1|SKILLSREMAINING:1
-CLASSABILITIESLEVEL:Companion=2|HITPOINTS:2|SKILLSGAINED:1|SKILLSREMAINING:1
+CLASS:Companion|LEVEL:2|SKILLPOOL:0
+CLASSABILITIESLEVEL:Companion=1|HITPOINTS:6|SKILLSGAINED:1|SKILLSREMAINING:0
+CLASSABILITIESLEVEL:Companion=2|HITPOINTS:2|SKILLSGAINED:1|SKILLSREMAINING:0
 
 # Character Experience
 EXPERIENCE:0
@@ -76,7 +76,7 @@ SKILL:Acrobatics|OUTPUTORDER:1|
 SKILL:Acrobatics (Jump)|OUTPUTORDER:2|
 SKILL:Appraise|OUTPUTORDER:3|
 SKILL:Bluff|OUTPUTORDER:4|
-SKILL:Climb|OUTPUTORDER:5|
+SKILL:Climb|OUTPUTORDER:5|CLASSBOUGHT:[CLASS:Companion|RANKS:1.0|COST:1|CLASSSKILL:Y]
 SKILL:Craft (Untrained)|OUTPUTORDER:6|
 SKILL:Diplomacy|OUTPUTORDER:7|
 SKILL:Disguise|OUTPUTORDER:8|
@@ -88,7 +88,7 @@ SKILL:Perception|OUTPUTORDER:13|
 SKILL:Perform (Untrained)|OUTPUTORDER:14|
 SKILL:Ride|OUTPUTORDER:15|
 SKILL:Sense Motive|OUTPUTORDER:16|
-SKILL:Stealth|OUTPUTORDER:17|
+SKILL:Stealth|OUTPUTORDER:17|CLASSBOUGHT:[CLASS:Companion|RANKS:1.0|COST:1|CLASSSKILL:Y]
 SKILL:Survival|OUTPUTORDER:18|
 SKILL:Swim|OUTPUTORDER:19|
 
@@ -96,9 +96,19 @@ SKILL:Swim|OUTPUTORDER:19|
 
 
 # Character Feats
-FEATPOOL:0.0
+FEATPOOL:-1.0
 
 # Character Abilities
+ABILITY:Animal Trick|TYPE:NORMAL|CATEGORY:Special Ability|KEY:Animal Training ~ Combat Training|TYPE:AnimalTrick.AnimalTraining.General.SpecialQuality|DESC:An animal trained to bear a rider into combat knows the tricks attack, come, defend, down, guard, and heel.
+ABILITY:Animal Trick|TYPE:NORMAL|CATEGORY:Special Ability|KEY:Animal Trick ~ Track|TYPE:AnimalTrick|DESC:The animal tracks the scent presented to it. (This requires the animal to have the scent ability.)
+USERPOOL:Animal Trick|POOLPOINTS:0.0
+ABILITY:FEAT|TYPE:NORMAL|CATEGORY:FEAT|KEY:Dodge|TYPE:Combat.CelestialBloodline.ElementalBloodline.FeyBloodline|DESC:Your training and reflexes allow you to react swiftly to avoid an opponent's attack.
+USERPOOL:FEAT|POOLPOINTS:0.0
+ABILITY:Traits|TYPE:NORMAL|CATEGORY:Special Ability|KEY:Deft Dodger_Trait|TYPE:Trait.BasicTrait.CombatTrait|DESC:Growing up in a rough neighborhood or a dangerous environment has honed your senses.
+ABILITY:Traits|TYPE:NORMAL|CATEGORY:Special Ability|KEY:Adopted_Trait|TYPE:Trait.BasicTrait.SocialTrait|DESC:You were adopted and raised by someone not of your actual race, and raised in a society not your own.
+USERPOOL:Traits|POOLPOINTS:0.0
+ABILITY:*LANGBONUS|TYPE:VIRTUAL|CATEGORY:*LANGBONUS|KEY:*LANGBONUS|APPLIEDTO:|TYPE:
+USERPOOL:*LANGBONUS|POOLPOINTS:0.0
 
 # Character Weapon proficiencies
 
