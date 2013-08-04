@@ -57,13 +57,14 @@ ALIGN:TN
 RACE:Companion (Wolf)
 
 # Character Class(es)
-CLASS:Companion|LEVEL:2|SKILLPOOL:0
+CLASS:Companion|LEVEL:3|SKILLPOOL:0
 CLASSABILITIESLEVEL:Companion=1|HITPOINTS:6|SKILLSGAINED:1|SKILLSREMAINING:0
 CLASSABILITIESLEVEL:Companion=2|HITPOINTS:2|SKILLSGAINED:1|SKILLSREMAINING:0
+CLASSABILITIESLEVEL:Companion=3|HITPOINTS:0|SKILLSGAINED:1|SKILLSREMAINING:0
 
 # Character Experience
-EXPERIENCE:0
-EXPERIENCETABLE:Medium
+EXPERIENCE:1350
+EXPERIENCETABLE:Fast
 
 # Character Templates
 TEMPLATESAPPLIED:[NAME:Creature with Class Levels]
@@ -84,7 +85,7 @@ SKILL:Escape Artist|OUTPUTORDER:9|
 SKILL:Fly|OUTPUTORDER:10|
 SKILL:Heal|OUTPUTORDER:11|
 SKILL:Intimidate|OUTPUTORDER:12|
-SKILL:Perception|OUTPUTORDER:13|
+SKILL:Perception|OUTPUTORDER:13|CLASSBOUGHT:[CLASS:Companion|RANKS:1.0|COST:1|CLASSSKILL:Y]
 SKILL:Perform (Untrained)|OUTPUTORDER:14|
 SKILL:Ride|OUTPUTORDER:15|
 SKILL:Sense Motive|OUTPUTORDER:16|
@@ -96,13 +97,15 @@ SKILL:Swim|OUTPUTORDER:19|
 
 
 # Character Feats
-FEATPOOL:-1.0
+FEATPOOL:-2.0
 
 # Character Abilities
 ABILITY:Animal Trick|TYPE:NORMAL|CATEGORY:Special Ability|KEY:Animal Training ~ Combat Training|TYPE:AnimalTrick.AnimalTraining.General.SpecialQuality|DESC:An animal trained to bear a rider into combat knows the tricks attack, come, defend, down, guard, and heel.
 ABILITY:Animal Trick|TYPE:NORMAL|CATEGORY:Special Ability|KEY:Animal Trick ~ Track|TYPE:AnimalTrick|DESC:The animal tracks the scent presented to it. (This requires the animal to have the scent ability.)
+ABILITY:Animal Trick|TYPE:NORMAL|CATEGORY:Special Ability|KEY:Animal Trick ~ Attack II|TYPE:AnimalTrick|DESC:Animal will attack all creatures (including such unnatural creatures as undead and aberrations).
 USERPOOL:Animal Trick|POOLPOINTS:0.0
 ABILITY:FEAT|TYPE:NORMAL|CATEGORY:FEAT|KEY:Dodge|TYPE:Combat.CelestialBloodline.ElementalBloodline.FeyBloodline|DESC:Your training and reflexes allow you to react swiftly to avoid an opponent's attack.
+ABILITY:FEAT|TYPE:NORMAL|CATEGORY:FEAT|KEY:Agile Maneuvers|TYPE:Combat|DESC:You learned to use your quickness in place of brute force when performing combat maneuvers.
 USERPOOL:FEAT|POOLPOINTS:0.0
 ABILITY:Traits|TYPE:NORMAL|CATEGORY:Special Ability|KEY:Deft Dodger_Trait|TYPE:Trait.BasicTrait.CombatTrait|DESC:Growing up in a rough neighborhood or a dangerous environment has honed your senses.
 ABILITY:Traits|TYPE:NORMAL|CATEGORY:Special Ability|KEY:Adopted_Trait|TYPE:Trait.BasicTrait.SocialTrait|DESC:You were adopted and raised by someone not of your actual race, and raised in a society not your own.
@@ -111,11 +114,13 @@ ABILITY:*LANGBONUS|TYPE:VIRTUAL|CATEGORY:*LANGBONUS|KEY:*LANGBONUS|APPLIEDTO:|TY
 USERPOOL:*LANGBONUS|POOLPOINTS:0.0
 
 # Character Weapon proficiencies
+WEAPONPROF:[WEAPON:Bite]
 
 # Character Equipment
 MONEY:0
-EQUIPNAME:Bite (Natural/Primary)|OUTPUTORDER:0|COST:0|WT:0.0|QUANTITY:1.0|CUSTOMIZATION:[BASEITEM:Bite|DATA:KEY=Bite]
+EQUIPNAME:Bite (Natural/Primary)|OUTPUTORDER:1|COST:0|WT:0.0|QUANTITY:1.0|CUSTOMIZATION:[BASEITEM:Bite|DATA:KEY=Bite]
 EQUIPSET:Default Set|ID:0.1|USETEMPMODS:Y
+EQUIPSET:Natural-Primary|ID:0.1.1|VALUE:Bite (Natural/Primary)|QUANTITY:1.0|USETEMPMODS:Y
 CALCEQUIPSET:0.1
 
 # Temporary Bonuses
@@ -139,7 +144,7 @@ CHARACTERDMNOTES:
 KIT:Companion ~ Wolf
 
 # Character Master/Follower
-MASTER:Ash|TYPE:Animal Companion|HITDICE:0|FILE:Ash.pcg|ADJUSTMENT:0
+MASTER:Ash|TYPE:Animal Companion|HITDICE:1|FILE:Ash.pcg|ADJUSTMENT:0
 
 # Character Notes Tab
 NOTE:Character Sheet Notes|ID:1|PARENTID:-1|VALUE:
