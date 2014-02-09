@@ -6,7 +6,7 @@ VERSION:6.00.01
 ROLLMETHOD:0|EXPRESSION:0
 PURCHASEPOINTS:N
 CHARACTERTYPE:PC
-POOLPOINTS:0
+POOLPOINTS:1
 POOLPOINTSAVAIL:-1
 GAMEMODE:Pathfinder_RPG
 TABLABEL:0
@@ -57,10 +57,11 @@ ALIGN:TN
 RACE:Companion (Wolf)
 
 # Character Class(es)
-CLASS:Companion|LEVEL:3|SKILLPOOL:0
+CLASS:Companion|LEVEL:4|SKILLPOOL:0
 CLASSABILITIESLEVEL:Companion=1|HITPOINTS:6|SKILLSGAINED:1|SKILLSREMAINING:0
 CLASSABILITIESLEVEL:Companion=2|HITPOINTS:2|SKILLSGAINED:1|SKILLSREMAINING:0
 CLASSABILITIESLEVEL:Companion=3|HITPOINTS:0|SKILLSGAINED:1|SKILLSREMAINING:0
+CLASSABILITIESLEVEL:Companion=4|HITPOINTS:3|SKILLSGAINED:1|SKILLSREMAINING:0
 
 # Character Experience
 EXPERIENCE:1350
@@ -91,7 +92,7 @@ SKILL:Ride|OUTPUTORDER:15|
 SKILL:Sense Motive|OUTPUTORDER:16|
 SKILL:Stealth|OUTPUTORDER:17|CLASSBOUGHT:[CLASS:Companion|RANKS:1.0|COST:1|CLASSSKILL:Y]
 SKILL:Survival|OUTPUTORDER:18|
-SKILL:Swim|OUTPUTORDER:19|
+SKILL:Swim|OUTPUTORDER:19|CLASSBOUGHT:[CLASS:Companion|RANKS:1.0|COST:1|CLASSSKILL:Y]
 
 # Character Languages
 
@@ -104,6 +105,8 @@ ABILITY:Animal Trick|TYPE:NORMAL|CATEGORY:Special Ability|KEY:Animal Training ~ 
 ABILITY:Animal Trick|TYPE:NORMAL|CATEGORY:Special Ability|KEY:Animal Trick ~ Track|TYPE:AnimalTrick|DESC:The animal tracks the scent presented to it. (This requires the animal to have the scent ability.)
 ABILITY:Animal Trick|TYPE:NORMAL|CATEGORY:Special Ability|KEY:Animal Trick ~ Attack II|TYPE:AnimalTrick|DESC:Animal will attack all creatures (including such unnatural creatures as undead and aberrations).
 USERPOOL:Animal Trick|POOLPOINTS:0.0
+ABILITY:Companion Stat Increase|TYPE:NORMAL|CATEGORY:Special Ability|KEY:Companion Stat ~ CON|APPLIEDTO:|TYPE:CompStatChoice
+USERPOOL:Companion Stat Increase|POOLPOINTS:0.0
 ABILITY:FEAT|TYPE:NORMAL|CATEGORY:FEAT|KEY:Dodge|TYPE:Combat.CelestialBloodline.ElementalBloodline.FeyBloodline|DESC:Your training and reflexes allow you to react swiftly to avoid an opponent's attack.
 ABILITY:FEAT|TYPE:NORMAL|CATEGORY:FEAT|KEY:Agile Maneuvers|TYPE:Combat|DESC:You learned to use your quickness in place of brute force when performing combat maneuvers.
 USERPOOL:FEAT|POOLPOINTS:0.0
@@ -144,7 +147,7 @@ CHARACTERDMNOTES:
 KIT:Companion ~ Wolf
 
 # Character Master/Follower
-MASTER:Ash|TYPE:Animal Companion|HITDICE:1|FILE:Ash.pcg|ADJUSTMENT:0
+MASTER:Ash|TYPE:Animal Companion|HITDICE:2|FILE:Ash.pcg|ADJUSTMENT:0
 
 # Character Notes Tab
 NOTE:Character Sheet Notes|ID:1|PARENTID:-1|VALUE:
